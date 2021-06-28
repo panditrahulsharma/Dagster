@@ -1,17 +1,21 @@
-first pipeline
-https://docs.dagster.io/tutorial/intro-tutorial/single-solid-pipeline
+first pipeline:
+      https://docs.dagster.io/tutorial/intro-tutorial/single-solid-pipeline
 
+second pipeline:
+      https://docs.dagster.io/tutorial/intro-tutorial/connecting-solids
 
-
-
-
-
-
-commands:-
+commands:
 	dagster pipeline execute -f hello_world.py
-
 	dagit -f hello_world.py
 
+
+Solids:
+	https://docs.dagster.io/concepts/solids-pipelines/solids
+
+
+pipeline:
+
+	https://docs.dagster.io/concepts/solids-pipelines/pipelines
 
 #-------------------------read the docs carefully----------
 https://docs.dagster.io/getting-started
