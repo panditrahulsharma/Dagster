@@ -2,9 +2,17 @@
 udp_sink_sdk
 ++++++++
 
-* bullet
+* udp_sink_sdk.client() ::
 
-  * add_layer_version_permission()
-  * add_permission()
-  * can_paginate()
+    Tutorial
+    ========
+
+    This is the ``astrospam`` tutorial.
+
+
+   * bullet
+
+     * add_layer_version_permission()
+     * add_permission()
+     * can_paginate()
 
