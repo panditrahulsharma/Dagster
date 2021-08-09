@@ -12,7 +12,16 @@ udp_sink_sdk
             The user_password of this API user. **REQUIRED**
         ssl_path:
             The ssl_path for secure Authentication. **REQUIRED**
-
+            
+      create class object::
+      
+         import udp_sink_sdk
+         obj=udp_sink_sdk.client(
+               env,
+               user_id,
+               user_password,
+               ssl_path
+            ) 
 
 2. These are the available methods
 --------------------
