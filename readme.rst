@@ -2,7 +2,7 @@
 udp_sink_sdk
 =====================
 
-Class udp_sink_sdk.client() 
+1.Class udp_sink_sdk.client() 
 ---------------
 
     This is the Lambda API Reference . The Lambda Developer Guide provides additional information. For the service overview,
@@ -21,8 +21,10 @@ Class udp_sink_sdk.client()
                     The ssl_path for secure Authentication. **REQUIRED**
             ------------------------
             obj_sdk = udp_sink_sdk.client('env','username','password')
-----------------
-* These are the available methods:
+
+
+2.These are the available methods
+--------------------
      * _udp_sink_conn()
      * udp_sink_writer()
 
