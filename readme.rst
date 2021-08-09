@@ -3,14 +3,14 @@ udp_sink_sdk
 
 1. Class udp_sink_sdk.client(env,username,password,ssl_cert)
 ---------------
-    * A Python interface for the udp_sink_sdk API
-        :enviroment:
+     A Python interface for the udp_sink_sdk API
+        enviroment:
             env. **REQUIRED**
-        :username:
+        username:
             The user_id of this API user. **REQUIRED**
-        :password:
+        password:
             The user_password of this API user. **REQUIRED**
-        :ssl_path:
+        ssl_path:
             The ssl_path for secure Authentication. **REQUIRED**
 
 
