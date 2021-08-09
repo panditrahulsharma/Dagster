@@ -60,11 +60,12 @@ udp_sink_sdk
          The name of your table_name in which you are creating or inserting the data. **REQUIRED**
       param df
          The Dataframe that you want to insert into the table **REQUIRED**
-      param mode
+      param mode::
+      
          provide mode according to the requirement **REQUIRED**
-          - ``fail`` If table exists, do nothing.
-          - ``replace`` If table exists, drop it, recreate it, and insert data.
-          - ``append`` If table exists, insert data. Create if does not exist.
+          - fail If table exists, do nothing.
+          - replace If table exists, drop it, recreate it, and insert data.
+          - append If table exists, insert data. Create if does not exist.
 
 
 
