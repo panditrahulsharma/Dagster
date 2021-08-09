@@ -4,13 +4,13 @@ udp_sink_sdk
 1. Class udp_sink_sdk.client(env,username,password,ssl_cert)
 ---------------
     * A Python interface for the udp_sink_sdk API
-        :param enviroment:
+        :enviroment:
             env. **REQUIRED**
-        :param username:
+        :username:
             The user_id of this API user. **REQUIRED**
-        :param password:
+        :password:
             The user_password of this API user. **REQUIRED**
-        :param ssl_path:
+        :ssl_path:
             The ssl_path for secure Authentication. **REQUIRED**
 
 
@@ -25,10 +25,10 @@ udp_sink_sdk
       
       parameters endpoints
          A dictionary containing the connection information that is host,port and protocol. **REQUIRED**
-      param database_name
+      database_name
          The name of your database of up to 64 alphanumeric characters. If you do not provide a name,
          sdk doesn't create a connection in presto.  **REQUIRED**
-      param schema_name
+      schema_name
          The name for your schema of up to 64 alphanumeric characters. **REQUIRED**
       returns
          A sqlalchemy_engine connection.
@@ -49,18 +49,16 @@ udp_sink_sdk
             mode="append"
             )      
 
-     param engine_presto
-         engine_presto for querying the data **REQUIRED**
-     param database_name
+      database_name
          The name of your database of up to 64 alphanumeric characters. If you do not provide a name,
          sdk doesn't create a connection in presto.  **REQUIRED**
-      param schema_name
+      schema_name
          The name for your schema of up to 64 alphanumeric characters. **REQUIRED**
-      param table_name
+      table_name
          The name of your table_name in which you are creating or inserting the data. **REQUIRED**
-      param df
+      df(pandas Dataframe)
          The Dataframe that you want to insert into the table **REQUIRED**
-      param mode::
+      mode::
       
          provide mode according to the requirement **REQUIRED**
           - fail If table exists, do nothing.
