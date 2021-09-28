@@ -1,20 +1,35 @@
-name: Python package
+stages:
+  - Build-Wheel-file
+  - Publish
 
-on: [push]
 
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.6, 3.7, 3.8, 3.9]
-
-    steps:
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install dagster dagit
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          
-          python hello_world.py
+Build-Wheel-file:
+  stage: Build-Wheel-file
+  image: python:latest
+  script:
+    - pip install --upgrade pip setuptools wheel
+    - pip install pandas requests boto3
+    - python ./setup.py bdist_wheel
+  allow_failure: false
+  artifacts:
+    public: true 
+    paths:
+      - dist/*.whl
+  only:
+    - master
+  
+Publish:
+  stage: Build-Wheel-file
+  image: python:latest
+  script:
+    - pip install --upgrade pip setuptools wheel
+    - pip install pandas requests boto3
+    - python ./setup.py bdist_wheel
+  allow_failure: false
+  artifacts:
+    public: true 
+    paths:
+      - dist/*.whl
+  only:
+    - master
+  
