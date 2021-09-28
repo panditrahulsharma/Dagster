@@ -1,35 +1,9 @@
+image: alpine
+
 stages:
-  - Build-Wheel-file
-  - Publish
+  - deployment
 
-
-Build-Wheel-file:
-  stage: Build-Wheel-file
-  image: python:latest
+deploy:
+  stage: deployment
   script:
-    - pip install --upgrade pip setuptools wheel
-    - pip install pandas requests boto3
-    - python ./setup.py bdist_wheel
-  allow_failure: false
-  artifacts:
-    public: true 
-    paths:
-      - dist/*.whl
-  only:
-    - master
-  
-Publish:
-  stage: Build-Wheel-file
-  image: python:latest
-  script:
-    - pip install --upgrade pip setuptools wheel
-    - pip install pandas requests boto3
-    - python ./setup.py bdist_wheel
-  allow_failure: false
-  artifacts:
-    public: true 
-    paths:
-      - dist/*.whl
-  only:
-    - master
-  
+    echo "hello"
